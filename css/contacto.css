@@ -1,0 +1,382 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica', sans-serif;
+}
+
+body {
+  background-image: url('https://i.pinimg.com/736x/51/e6/f2/51e6f2f69e1df91e45c022c654a74467.jpg'); /* Ruta a tu imagen de fondo principal */
+  background-size: cover; /* Cubre todo el fondo */
+  background-position: center center; /* Centra la imagen */
+  background-repeat: no-repeat; /* No repetir la imagen */
+  background-attachment: fixed; /* Fija la imagen al hacer scroll */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+  color: #1F2937; /* Color de texto predeterminado */
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  transition: 0.7s;
+  z-index: 10;
+  background-color: transparent; /* Fondo transparente por defecto */
+}
+
+header.abajo {
+  background-color: #ffffff; /* Fondo blanco cuando se hace scroll */
+  height: 60px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.logo img {
+  max-height: 210px; /* Controla el tamaño final visible */
+  width: auto;
+  transition: 0.3s ease;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff; /* Color de los enlaces de navegación por defecto */
+  margin: 0 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+/* Efecto hover del menú principal */
+nav ul li a:hover {
+  background-color: #c0d8f9; /* Azul claro al pasar el ratón */
+  color: #FFFFFF;
+}
+
+/* Cuando se hace scroll */
+header.abajo ul li a {
+  color: #1F2937; /* Color más oscuro para los enlaces de navegación cuando el header es "abajo" */
+}
+
+/* SECCIÓN PRINCIPAL DE CONTACTO */
+.seccion-contacto-principal {
+    padding: 50px 5%;
+    background-color: rgba(255, 255, 255, 0.85); /* Fondo blanco semitransparente para que se vea el fondo */
+    margin-top: 80px; /* Para que no quede bajo el header fijo */
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px; /* Ancho máximo para la sección de contacto */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada para resaltar */
+}
+
+.contenedor-contacto {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.obtener-contacto,
+.informacion-contacto {
+    background-color: #ffffff; /* Fondo blanco para las tarjetas de contacto */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+    flex: 1;
+    min-width: 300px;
+    max-width: 550px;
+    color: #1F2937; /* Color de texto */
+}
+
+.obtener-contacto h2,
+.informacion-contacto p {
+    color: #1F2937; /* Color de texto */
+    margin-bottom: 25px;
+}
+
+.formulario-contacto .grupo-formulario {
+    margin-bottom: 20px;
+}
+
+.formulario-contacto label {
+    display: block;
+    margin-bottom: 8px;
+    color: #4B5563; /* Gris ligeramente más oscuro para etiquetas */
+    font-size: 0.9rem;
+}
+
+.formulario-contacto input[type="text"],
+.formulario-contacto input[type="email"],
+.formulario-contacto textarea {
+    width: calc(100% - 20px);
+    padding: 12px;
+    border: 1px solid #D1D5DB; /* Borde más claro */
+    border-radius: 5px;
+    background-color: #F3F4F6; /* Fondo claro para inputs */
+    color: #1F2937; /* Color del texto del input */
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.formulario-contacto textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.formulario-contacto input::placeholder,
+.formulario-contacto textarea::placeholder {
+    color: #9CA3AF; /* Color de placeholder más claro */
+}
+
+.boton-enviar {
+    background-color: #000000; /* Color púrpura */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    width: 100%;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.boton-enviar:hover {
+    background-color: #000000;
+}
+
+.informacion-contacto .elemento-informacion {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.informacion-contacto .elemento-informacion i {
+    font-size: 1.5rem;
+    color: #000000; /* Color púrpura */
+    margin-right: 15px;
+}
+
+.informacion-contacto .elemento-informacion div span {
+    display: block;
+    font-size: 0.9rem;
+    color: #4B5563; /* Color de texto */
+}
+
+.informacion-contacto .elemento-informacion div p {
+    margin: 0;
+    font-size: 1rem;
+    color: #1F2937; /* Color de texto */
+}
+
+.contenedor-mapa {
+    width: 100%;
+    height: 200px;
+    background-color: #E5E7EB; /* Fondo más claro para el mapa */
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 25px;
+}
+
+.contenedor-mapa img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-principal {
+    background-image: url('https://i.pinimg.com/736x/22/2b/6a/222b6a612dc5ad31b69faf93dcc6c01c.jpg'); /* Ruta a la imagen de la ciudad */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    margin-top: 40px;
+    padding: 60px 0;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-principal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Overlay oscuro */
+    border-radius: 10px;
+}
+
+.contenido-banner {
+    position: relative;
+    z-index: 1;
+}
+
+.banner-principal h2 {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.boton-contratar {
+    background-color: #000000; /* Color púrpura */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.boton-contratar:hover {
+    background-color: #000000;
+}
+
+/* FOOTER */
+.footer {
+  background: #1F2937; /* Fondo oscuro */
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto;
+  color: #F9FAFB;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.icon-elem {
+  list-style: none;
+}
+
+.icon {
+  color: #F9FAFB;
+  font-size: 32px;
+  margin: 0 10px;
+  transition: 0.5s;
+}
+
+.icon:hover {
+  transform: translateY(-10px);
+  color: #10B981; /* Color verde */
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.menu-elem {
+  list-style: none;
+}
+
+.menu-icon {
+  color: #F9FAFB;
+  font-size: 16px;
+  text-decoration: none;
+  margin: 5px 10px;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.menu-icon:hover {
+  opacity: 1;
+  color: #10B981; /* Color verde */
+}
+
+.texto-footer {
+  color: #F9FAFB;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background-color: #ffffff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+
+  header:hover nav ul {
+    display: flex;
+  }
+
+  nav ul li a {
+    color: #1F2937;
+    margin: 10px;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+
+  .icon {
+    font-size: 24px;
+  }
+
+  .menu-icon {
+    font-size: 14px;
+  }
+
+  .texto-footer {
+    font-size: 14px;
+  }
+
+  .contenedor-contacto {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .obtener-contacto,
+  .informacion-contacto {
+      max-width: 100%;
+      margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+    .banner-principal h2 {
+        font-size: 1.8rem;
+    }
+    .boton-contratar {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+}

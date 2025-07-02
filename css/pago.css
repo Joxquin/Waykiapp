@@ -1,0 +1,299 @@
+/* RESET Y FUENTE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica', sans-serif;
+}
+
+body {
+  background-color: #F9FAFB;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  transition: 0.7s;
+  z-index: 10;
+  background-color: transparent;
+}
+
+header.abajo {
+  background-color: #ffffff;
+  height: 60px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.logo img {
+  max-height: 210px;
+  width: auto;
+  transition: 0.3s ease;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+nav ul li a:hover {
+  background-color: #c0d8f9;
+  color: #FFFFFF;
+}
+
+header.abajo ul li a {
+  color: #1F2937;
+}
+
+/* SUBMENÚ DROPDOWN */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  min-width: 160px;
+}
+
+.dropdown-menu li {
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu li a {
+  color: #1F2937;
+  padding: 10px 15px;
+  display: block;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #c0d8f9;
+  color: #fff;
+}
+
+
+
+/* CONTENIDO GENERAL */
+.contenido {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #1F2937;
+}
+
+/* FORMULARIO DE BOLETA */
+.boleta {
+  max-width: 500px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.boleta h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.field input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.concepto {
+  background: #f4f4f4;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* CAPTCHA */
+.captcha {
+  margin-top: 15px;
+}
+
+.captcha label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.captcha input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #1F2937;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #374151;
+}
+
+/* MENSAJE DE COMPRA EXITOSA */
+.success-message,
+.receipt {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* FOOTER FINAL */
+.footer {
+  background: #1F2937;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto;
+  text-align: center;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.icon-elem {
+  list-style: none;
+  margin: 0 5px;
+}
+
+.icon-elem img {
+  width: 32px;
+  height: 32px;
+  filter: grayscale(100%);
+  transition: 0.3s ease;
+}
+
+.icon-elem img:hover {
+  filter: none;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.menu-elem {
+  list-style: none;
+}
+
+.menu-icon {
+  color: #F9FAFB;
+  font-size: 16px;
+  text-decoration: none;
+  margin: 5px 10px;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.menu-icon:hover {
+  opacity: 1;
+  color: #10B981;
+}
+
+.text {
+  color: #F9FAFB;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background-color: #ffffff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+  }
+
+  header:hover nav ul {
+    display: flex;
+  }
+
+  nav ul li a {
+    color: #1F2937;
+    margin: 10px;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+
+  .menu-icon {
+    font-size: 14px;
+  }
+
+  .text {
+    font-size: 14px;
+  }
+}

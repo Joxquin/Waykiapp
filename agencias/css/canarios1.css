@@ -1,0 +1,251 @@
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  transition: 0.7s;
+  z-index: 10;
+  background-color: transparent;
+}
+
+header.abajo {
+  background-color: #ffffff;
+  height: 60px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.logo img {
+  max-height: 200px;
+  width: auto;
+  transition: 0.3s ease;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+nav ul li a:hover {
+  background-color: #1F2937;
+  color: #ffffff;
+}
+
+header.abajo nav ul li a {
+  color: #1F2937;
+}
+
+
+
+
+/* =================== ESTILO GENERAL =================== */
+body {
+  margin: 0;
+  font-family: 'Helvetica', sans-serif;
+  background-color: #9ec8f1;
+  color: #1F2937;
+  line-height: 1.6;
+}
+
+/* =================== CONTENIDO =================== */
+main.agencia__contenido {
+  padding: 120px 20px 60px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* =================== INFO DE LA AGENCIA =================== */
+.agencia__logo {
+  width: 80px;
+  margin-bottom: 1rem;
+}
+
+.agencia__info {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.agencia__info h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* =================== RUTAS =================== */
+.agencia__rutas {
+  margin-bottom: 2rem;
+}
+
+.agencia__rutas ul {
+  list-style: none;
+  padding: 0;
+}
+
+.agencia__rutas li {
+  background: #ffffff;
+  border-left: 4px solid #3B82F6;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* =================== HORARIOS =================== */
+.agencia__horarios {
+  margin-bottom: 2rem;
+}
+
+.agencia__horarios p {
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+/* =================== MAPA =================== */
+.agencia__mapa iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 0.75rem;
+}
+
+/* =================== BOTÓN =================== */
+.agencia__boton {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.simular__ruta {
+  display: inline-block;
+  background-color: #3B82F6;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.simular__ruta:hover {
+  background-color: #2563EB;
+}
+/* FOOTER */
+.footer {
+  background: #1F2937;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.icon-elem {
+  list-style: none;
+}
+
+.icon {
+  color: #F9FAFB;
+  font-size: 32px;
+  margin: 0 10px;
+  transition: 0.5s;
+}
+
+.icon:hover {
+  transform: translateY(-10px);
+  color: #10B981;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.menu-elem {
+  list-style: none;
+}
+
+.menu-icon {
+  color: #F9FAFB;
+  font-size: 16px;
+  text-decoration: none;
+  margin: 5px 10px;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.menu-icon:hover {
+  opacity: 1;
+  color: #10B981;
+}
+
+.text {
+  color: #F9FAFB;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background-color: #ffffff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+  }
+
+  header:hover nav ul {
+    display: flex;
+  }
+
+  nav ul li a {
+    color: #1F2937;
+    margin: 10px;
+  }
+
+  .logo img {
+    max-height: 50px;
+  }
+
+  .icon {
+    font-size: 24px;
+  }
+
+  .menu-icon {
+    font-size: 14px;
+  }
+
+  .text {
+    font-size: 14px;
+  }
+}

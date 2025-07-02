@@ -1,0 +1,16 @@
+body {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.01), rgba(0,0,0,0.5)),
+        url(../img/destinos/MdSBackground.png);
+    position: relative;
+}
+
+gmp-map {
+  display: block;
+  margin: 40px auto;
+  width: 70%;
+  max-width: 600px;
+  height: 400px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  background: #fff;
+}

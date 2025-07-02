@@ -1,0 +1,468 @@
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  transition: 0.7s;
+  z-index: 10;
+  background-color: transparent;
+}
+
+header.abajo {
+  background-color: #ffffff;
+  height: 60px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.logo img {
+  max-height: 210px;
+  width: auto;
+  transition: 0.3s ease;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+nav ul li a:hover {
+  background-color: #c0d8f9;
+  color: #FFFFFF;
+}
+
+header.abajo ul li a {
+  color: #1F2937;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #000;
+    color: #eee;
+    font-family: Helvetica, sans-serif; /* Added sans-serif as a fallback for broader compatibility */
+    font-size: 12px;
+}
+
+
+/* Sección principal */
+.zona1 {
+    width: 100%;
+    height: 100vh;
+    background: url(https://mangatschool.com/wp-content/uploads/2021/03/curso-fundamentos-de-programacion-algoritmos.jpg) no-repeat center center/cover;
+}
+
+/* Carousel */
+.carousel {
+    height: 100vh;
+    margin-top: -50px;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+.carousel .list .item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+}
+.carousel .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+.carousel .list .item .content {
+    position: absolute;
+    top: 20%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004;
+}
+.carousel .list .item .author {
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+.carousel .list .item .title,
+.carousel .list .item .topic {
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+.carousel .list .item .topic {
+    color: #ffffff;
+}
+.carousel .list .item .des {
+    margin-bottom: 20px; /* Space below description */
+    line-height: 1.5; /* Improve readability of description */
+}
+.carousel .list .item .buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
+}
+.carousel .list .item .buttons button {
+    border: none;
+    background-color: #eee;
+    letter-spacing: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0 15px; /* Add some horizontal padding */
+    border-radius: 5px; /* Slightly rounded buttons */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.carousel .list .item .buttons button:nth-child(2) {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #eee;
+}
+.carousel .list .item .buttons button:hover {
+    opacity: 0.8;
+}
+
+/* --- THUMBNAIL STYLES (MODIFIED TO SHOW 3 ITEMS ONLY) --- */
+
+/* Define CSS Variables for easy adjustment of thumbnail size/gap */
+:root {
+    --thumbnail-width: 120px;
+    --thumbnail-height: 200px; /* Original height from your code, if image ratio is different, adjust here */
+    --thumbnail-gap: 20px;
+    --thumbnail-border-radius: 20px; /* From image_a2f740.png */
+}
+
+.thumbnail {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    /* Calculate precise width for 3 items + 2 gaps between them */
+    width: calc(3 * var(--thumbnail-width) + 2 * var(--thumbnail-gap));
+    transform: translateX(-50%);
+    z-index: 100;
+    display: flex;
+    gap: var(--thumbnail-gap);
+    padding: 0; /* No padding needed here for strict 3-item display if content is outside */
+    overflow: hidden; /* CRITICAL: Hides any thumbnails beyond the 3 visible */
+    /* Use justify-content to space/center the three items within the container */
+    justify-content: space-between; /* Distributes items evenly within the width */
+    /* Add a transform property for JavaScript to control the horizontal slide */
+    transform: translateX(-50%) var(--thumbnail-carousel-offset, translateX(0px)); /* Combined transform */
+    transition: transform 0.5s ease-in-out; /* Smooth transition for JS-controlled sliding */
+}
+
+/* This is the container for the actual thumbnails that will slide */
+/* It needs to be inside .thumbnail to apply transform to all items */
+/* You might need to adjust your HTML structure slightly for this,
+   e.g., <div class="thumbnail"><div class="thumbnail-inner-wrapper"> ... items ... </div></div> */
+/* Or, your JS directly manipulates the `left` or `transform` of individual items. */
+/* If you keep your current HTML structure, the transform needs to go on the .thumbnail element directly
+   and we'll assume the .thumbnail .item elements are what get shifted. */
+
+
+.thumbnail .item {
+    width: var(--thumbnail-width);
+    height: var(--thumbnail-height);
+    flex-shrink: 0; /* Prevents items from shrinking */
+    position: relative;
+    overflow: hidden; /* Ensures image and content inside respects border-radius */
+    border-radius: var(--thumbnail-border-radius);
+    background-color: #ffffff; /* White background for the thumbnail item itself */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Soft, prominent shadow */
+    border: 1px solid rgba(255, 255, 255, 0.6); /* Subtle white border for lifted look */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    /* No translateX here, the parent .thumbnail will handle the group slide */
+}
+
+.thumbnail .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--thumbnail-border-radius);
+}
+
+.thumbnail .item .content {
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 5px 0;
+    border-bottom-left-radius: var(--thumbnail-border-radius);
+    border-bottom-right-radius: var(--thumbnail-border-radius);
+    font-size: 0.9em;
+}
+
+.thumbnail .item .content .title {
+    font-weight: 500;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.thumbnail .item .content .description {
+    display: none;
+}
+
+/* Style for the active thumbnail (requires JS to add/remove 'active' class) */
+.thumbnail .item.active {
+    border: 3px solid #5C7CFA; /* Example active state border */
+    box-shadow: 0 0 15px rgba(92, 124, 250, 0.7); /* Glow for active item */
+    transform: translateY(-5px) scale(1.05); /* Lifts and slightly enlarges active thumbnail */
+}
+
+/* Arrows */
+.arrows {
+    position: absolute;
+    top: 320px;
+    right: 50%;
+    transform: translateX(50%);
+    z-index: 100;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.arrows button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee4;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+}
+.arrows button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Animaciones */
+.carousel .list .item:nth-child(1) {
+    z-index: 1;
+}
+.carousel .list .item:nth-child(1) .content .author,
+.carousel .list .item:nth-child(1) .content .title,
+.carousel .list .item:nth-child(1) .content .topic,
+.carousel .list .item:nth-child(1) .content .des,
+.carousel .list .item:nth-child(1) .content .buttons {
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 1s linear 1 forwards;
+}
+@keyframes showContent {
+    to {
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+.carousel .list .item:nth-child(1) .content .title { animation-delay: 1.2s !important; }
+.carousel .list .item:nth-child(1) .content .topic { animation-delay: 1.4s !important; }
+.carousel .list .item:nth-child(1) .content .des { animation-delay: 1.6s !important; }
+.carousel .list .item:nth-child(1) .content .buttons { animation-delay: 1.8s !important; }
+
+/* NOTE: These animations (showImage, outFrame) are designed for a specific 
+   transition of the FIRST/SECOND item. For a truly scalable carousel with many items, 
+   your JavaScript will need to manage the transformation of all items dynamically 
+   as they enter/exit the main view and thumbnail positions. */
+.carousel.next .list .item:nth-child(1) img {
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 30px;
+    animation: showImage 0.5s linear 1 forwards;
+}
+@keyframes showImage {
+    to {
+        bottom: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+.carousel.next .thumbnail .item:nth-last-child(1) {
+    overflow: hidden;
+    animation: showThumbnail 0.5s linear 1 forwards;
+}
+@keyframes showThumbnail {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+}
+.carousel.next .thumbnail {
+    animation: effectNext 0.5s linear 1 forwards;
+}
+@keyframes effectNext {
+    from {
+        transform: translateX(150px);
+    }
+}
+.carousel .time {
+    position: absolute;
+    z-index: 1000;
+    width: 0%;
+    height: 3px;
+    background-color: #ffffff;
+    left: 0;
+    top: 0;
+}
+.carousel.next .time,
+.carousel.prev .time {
+    animation: runningTime 3s linear 1 forwards;
+}
+@keyframes runningTime {
+    from { width: 100% }
+    to { width: 0 }
+}
+
+.carousel.prev .list .item:nth-child(2) {
+    z-index: 2;
+}
+.carousel.prev .list .item:nth-child(2) img {
+    animation: outFrame 0.5s linear 1 forwards;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+@keyframes outFrame {
+    to {
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 20px;
+    }
+}
+.carousel.prev .thumbnail .item:nth-child(1) {
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail 0.5s linear 1 forwards;
+}
+.carousel.next .arrows button,
+.carousel.prev .arrows button {
+    pointer-events: none;
+}
+.carousel.prev .list .item:nth-child(2) .content .author,
+.carousel.prev .list .item:nth-child(2) .content .title,
+.carousel.prev .list .item:nth-child(2) .content .topic,
+.carousel.prev .list .item:nth-child(2) .content .des,
+.carousel.prev .list .item:nth-child(2) .content .buttons {
+    animation: contentOut 1.5s linear 1 forwards !important;
+}
+@keyframes contentOut {
+    to {
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+
+/* Responsive */
+@media screen and (max-width: 678px) {
+    .carousel .list .item .content {
+        padding-right: 0;
+        width: 90%;
+    }
+
+    .carousel .list .item .content .title {
+        font-size: 30px;
+    }
+
+    a.logo {
+        position: relative;
+        right: 0px;
+        top: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        padding: 20px 0;
+        position: relative;
+        top:90px;
+        right: -20px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .arrows{
+        top: 520px;
+    }
+
+    /* Adjust thumbnails for smaller screens */
+    .thumbnail {
+        bottom: 20px;
+        /* Re-calculate width for 3 items on smaller screens */
+        width: calc(3 * 120px + 2 * 10px); /* Using hardcoded smaller values for mobile */
+        gap: 10px; /* Smaller gap for mobile */
+        padding: 0; /* No padding needed for strict 3-item display */
+    }
+
+    .thumbnail .item {
+        width: 120px; /* Smaller width */
+        height: 80px; /* Smaller height */
+        border-radius: 10px; /* Slightly less rounded */
+    }
+
+    .thumbnail .item img {
+        border-radius: 10px; /* Match image radius */
+    }
+
+    .thumbnail .item .content {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        font-size: 0.8em; /* Smaller font for text */
+        padding: 3px 0;
+    }
+
+
+    
+}

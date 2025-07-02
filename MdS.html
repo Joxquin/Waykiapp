@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wayki | Transporte</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/MdS.css">
+    <link rel="stylesheet" href="css/destinos_global.css">
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDt5We4B0t6SWXO8QXd5bf7lnPFIsvZJk&callback=console.debug&libraries=maps,marker&v=beta"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo">
+            <img src="img/logoprincipal.png" alt="Wayki Logo" />
+        </a>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="miruta.html">Mi Ruta</a></li>
+                <li><a href="destinos.html">Destinos</a></li>
+                <li><a href="login.html">Afiliate</a></li>
+                <li><a href="sobre nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Main Content -->
+    <main>
+        <h1 class="title-main">MIRADOR DE SACHACA</h1>
+        <div class="content">
+            <p class="description">
+                El Mirador de Sachaca ofrece una impresionante vista panorámica de Arequipa, 
+                sus volcanes y el paisaje natural. Es un lugar perfecto para apreciar la belleza 
+                de la ciudad y disfrutar de momentos de tranquilidad.
+            </p>
+        </div>
+            <h2 class="subtitle-main">FOTOS RELEVANTES</h2>
+        </div>
+        <div>
+            <h2 class="subtitle-main">MAS INFORMACION</h2>
+        </div>
+            <h2 class="subtitle-main">UBICACION</h2>
+        <div>
+          <gmp-map center="-16.426075565565124, -71.56740941703093" zoom="18" map-id="DEMO_MAP_ID">
+            <gmp-advanced-marker position="-16.426075565565124, -71.56740941703093" title="Mirador de Sachaca"></gmp-advanced-marker>
+            <gmp-circle center="-16.426075565565124, -71.56740941703093" radius="1000" fill-opacity="0.15"></gmp-circle>
+          </gmp-map>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <ul class="social-icon">
+            <li class="icon-elem">
+                <a href="" class="icon">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+            </li>
+            <li class="icon-elem">
+                <a href="" class="icon">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </li>
+            <li class="icon-elem">
+                <a href="" class="icon">
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                </a>
+            </li>
+            <li class="icon-elem">
+                <a href="" class="icon">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+            </li>
+            <li class="icon-elem">
+                <a href="" class="icon">
+                    <ion-icon name="mail-outline"></ion-icon>
+                </a>
+            </li>
+        </ul>
+        <ul class="menu">
+            <li class="menu-elem"><a href="#" class="menu-icon">Inicio</a></li>
+            <li class="menu-elem"><a href="#" class="menu-icon">Ir</a></li>
+            <li class="menu-elem"><a href="destinos.html" class="menu-icon">Destinos</a></li>
+            <li class="menu-elem"><a href="#" class="menu-icon">Afíliate</a></li>
+            <li class="menu-elem"><a href="#" class="menu-icon">Nosotros</a></li>
+            <li class="menu-elem"><a href="#" class="menu-icon">Contacto</a></li>
+        </ul>
+        <p class="text">@2025 | Todos los derechos reservados</p>
+    </footer>
+    <!-- Scripts -->
+    <script src="js/scripts.js"></script>
+    <script src="js/destinos.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

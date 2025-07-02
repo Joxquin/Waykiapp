@@ -1,0 +1,389 @@
+/* ---------------- HEADER ---------------- */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  transition: 0.7s;
+  z-index: 10;
+  background-color: transparent;
+}
+
+header.abajo {
+  background-color: #ffffff;
+  height: 60px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.logo img {
+  max-height: 200px;
+  width: auto;
+  transition: 0.3s ease;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+nav ul li a:hover {
+  background-color: #1F2937;
+  color: #ffffff;
+}
+
+header.abajo nav ul li a {
+  color: #1F2937;
+}
+
+/* ---------------- GENERAL ---------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica', sans-serif;
+}
+
+body {
+  background: url("../img/img1.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #1F2937;
+}
+
+/* ---------------- FORMULARIO HERO (miruta.html) ---------------- */
+.hero {
+  background: url('../img/fondo-busqueda.jpg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.buscador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.buscador label {
+  font-weight: bold;
+}
+
+.buscador select,
+.buscador button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+}
+
+.buscador select:focus,
+.buscador button:focus {
+  outline: none;
+}
+
+.buscador button {
+  background-color: #f39c12;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.buscador button:hover {
+  background-color: #e67e22;
+}
+
+/* ---------------- BIENVENIDA ---------------- */
+.bienvenida {
+  text-align: center;
+  padding: 40px 20px;
+  background: #fff;
+}
+
+.bienvenida h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.bienvenida p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* ---------------- LAYOUT MAPA (mapa.html) ---------------- */
+.layout {
+  display: flex;
+  min-height: calc(100vh - 160px); /* Ajuste para header + footer */
+}
+
+.sidebar {
+  background-color: #f7f7f7;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formulario__ruta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formulario__ruta label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.formulario__ruta select,
+.formulario__ruta button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.formulario__ruta button {
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.formulario__ruta button:hover {
+  background-color: #e67e22;
+}
+
+.lista__buses h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.lista__buses ul {
+  list-style: none;
+  padding: 0;
+}
+
+.lista__buses li {
+  margin-bottom: 8px;
+  background: #fff;
+  padding: 8px 10px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  font-size: 0.95rem;
+}
+
+.mapa__contenido {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mapa__contenido h1 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.mapa__cuadro {
+  flex: 1;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+/* ---------------- FOOTER ---------------- */
+.footer {
+  background: #1F2937;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.icon-elem {
+  list-style: none;
+}
+
+.icon {
+  color: #F9FAFB;
+  font-size: 32px;
+  margin: 0 10px;
+  transition: 0.5s;
+}
+
+.icon:hover {
+  transform: translateY(-10px);
+  color: #10B981;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.menu-elem {
+  list-style: none;
+}
+
+.menu-icon {
+  color: #F9FAFB;
+  font-size: 16px;
+  text-decoration: none;
+  margin: 5px 10px;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.menu-icon:hover {
+  opacity: 1;
+  color: #10B981;
+}
+
+.text {
+  color: #F9FAFB;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background-color: #ffffff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+  }
+
+  header:hover nav ul {
+    display: flex;
+  }
+
+  nav ul li a {
+    color: #1F2937;
+    margin: 10px;
+  }
+
+  .logo img {
+    max-height: 50px;
+  }
+
+  .icon {
+    font-size: 24px;
+  }
+
+  .menu-icon {
+    font-size: 14px;
+  }
+
+  .text {
+    font-size: 14px;
+  }
+
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    box-shadow: none;
+  }
+}
+/* AGENCIAS */
+.agencias {
+  padding: 100px 20px;
+  text-align: center;
+  background-color: #F9FAFB;
+}
+
+.agencias h1 {
+  font-size: 2.2rem;
+  margin-bottom: 2.5rem;
+  color: #1F2937;
+}
+
+.agencias__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.agencia__card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  color: #1F2937;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.agencia__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.agencia__card img {
+  width: 64px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.agencia__card span {
+  display: block;
+  font-weight: bold;
+  font-size: 1rem;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Boleta de Pago - WAYKIGO</title>
+  <link rel="stylesheet" href="css/pago.css" />
+</head>
+<body>
+
+  <!-- HEADER/NAVBAR -->
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="WAYKIGO Logo" />
+    </div>
+    <nav>
+      <ul>
+          <li><a href="inicio.html">Inicio</a></li>
+          <li><a href="miruta.html">Mi Ruta</a></li>
+          <li><a href="destinos.html">Destinos</a></li>
+          <li><a href="login.html">Afiliate</a></li>
+          <li><a href="sobre nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- PORTADA -->
+  <section class="zona1"></section>
+
+  <!-- BOLETA DE PAGO -->
+  <div class="boleta">
+    <header>
+      <h2>Boleta de Pago</h2>
+    </header>
+
+    <form id="paymentForm">
+      <div class="field">
+        <label>Nombre completo:</label>
+        <input type="text" id="name" required />
+      </div>
+
+      <div class="field">
+        <label>Correo electrónico:</label>
+        <input type="email" id="email" required />
+      </div>
+
+      <div class="field">
+        <label>Número de tarjeta:</label>
+        <input type="text" id="cardNumber" required />
+      </div>
+
+      <div class="field">
+        <label>Concepto:</label>
+        <p class="concepto">Pago por servicio digital</p>
+      </div>
+
+      <!-- CAPTCHA -->
+      <div class="captcha">
+        <label id="captchaText"></label>
+        <input type="text" id="captchaInput" placeholder="Escribe el captcha" required />
+      </div>
+
+      <button type="submit">Pagar</button>
+    </form>
+
+    <div id="message" class="success-message"></div>
+
+    <!-- RECIBO DE COMPRA -->
+    <div id="receipt" class="receipt hidden">
+      <h3>✅ Compra Exitosa</h3>
+      <p><strong>Nombre:</strong> <span id="rName"></span></p>
+      <p><strong>Correo:</strong> <span id="rEmail"></span></p>
+      <p><strong>N° de Tarjeta:</strong> <span id="rCard"></span></p>
+      <p><strong>Concepto:</strong> Pago por servicio digital</p>
+    </div>
+
+    <footer>
+      <p>Gracias por su pago.</p>
+    </footer>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <ul class="social-icon">
+      <li class="icon-elem"><a href="#" class="icon"><ion-icon name="logo-youtube"></ion-icon></a></li>
+      <li class="icon-elem"><a href="#" class="icon"><ion-icon name="logo-instagram"></ion-icon></a></li>
+      <li class="icon-elem"><a href="#" class="icon"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+      <li class="icon-elem"><a href="#" class="icon"><ion-icon name="logo-facebook"></ion-icon></a></li>
+      <li class="icon-elem"><a href="#" class="icon"><ion-icon name="mail-outline"></ion-icon></a></li>
+    </ul>
+    <ul class="menu">
+      <li class="menu-elem"><a href="#" class="menu-icon">Inicio</a></li>
+      <li class="menu-elem"><a href="#" class="menu-icon">Mi ruta</a></li>
+      <li class="menu-elem"><a href="#" class="menu-icon">Destinos</a></li>
+      <li class="menu-elem"><a href="#" class="menu-icon">Afíliate</a></li>
+      <li class="menu-elem"><a href="#" class="menu-icon">Nosotros</a></li>
+      <li class="menu-elem"><a href="#" class="menu-icon">Contacto</a></li>
+    </ul>
+    <p class="text">@2025 | Todos los derechos reservados</p>
+  </footer>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="js/pago.js"></script>
+</body>
+</html>

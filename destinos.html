@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wayki | Transporte</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/destinos.css" />
+    <link rel="stylesheet" href="css/destinos_global.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo">
+            <img src="img/logoprincipal.png" alt="Wayki Logo" />
+        </a>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="miruta.html">Mi Ruta</a></li>
+                <li><a href="destinos.html">Destinos</a></li>
+                <li><a href="login.html">Afiliate</a></li>
+                <li><a href="sobre nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Main Content -->
+    <main>
+        <h1 class="title-main">DESTINOS</h1>
+        <div class="content">
+            <p class="description">
+                Descubre los destinos más populares y recomendados en Arequipa, 
+                donde la belleza de su arquitectura, la historia y la naturaleza 
+                se unen para ofrecerte una experiencia inolvidable.
+            </p>
+        </div>
+        <h2 class="subtitle-main">DESTINOS POPULARES</h2>
+        <div class="position-600">
+            <div class="destinos-flex-container">
+                <div class="scroll-container" id="destinos-list">
+                <a href="PdC.html">
+                    <img src="img/destinos/PlazaDeCayma.png" alt="Plaza de Cayma">
+                    <span class="img-caption">Plaza de Cayma</span>
+                </a>
+                <a href="MdS.html">
+                    <img src="img/destinos/MiradorDeSachaca.png" alt="Mirador de Sachaca">
+                    <span class="img-caption">Mirador de Sachaca</span>
+                </a>
+                <a href="">
+                    <img src="img/destinos/RutaDelSillar.png" alt="Ruta del Sillar">
+                    <span class="img-caption">Ruta del Sillar</span>
+                </a>
+                <a href="">
+                    <img src="img/destinos/MiradorDeYanahuara.png" alt="Mirador de Yanahuara">
+                    <span class="img-caption">Mirador de Yanahuara</span>
+                </a>
+                <a href="">
+                    <img src="img/destinos/LasSalinas.png" alt="Las Salinas">
+                    <span class="img-caption">Las Salinas</span>
+                </a>
+            </div>
+            <div id="destino-search-container">
+                <!-- Nuevo selector de distrito -->
+                <label id="distrito-select-label" for="distrito-select">Filtrar por distrito</label>
+                <select id="distrito-select">
+                    <option value="todos">Todos</option>
+                    <option value="cayma">Cayma</option>
+                    <option value="sachaca">Sachaca</option>
+                    <option value="cerrocolorado">Cerro Colorado</option>
+                    <option value="yanahuara">Yanahuara</option>
+                    <option value="sanjuandetarucani">San Juan de Tarucani</option>
+                </select>
+                <label id="destino-search-label" for="destino-search">Buscar destino</label>
+                <input type="text" id="destino-search" placeholder="Escribe para buscar...">
+            </div>
+        </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <ul class="social-icon">
+            <li class="icon-elem">
+                <a href="" class="icon">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+            </li>
+            <li class="icon-elem">
+                <a href="" class="icon">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </li>
+            <li class="icon-elem">
+                <a href="" class="icon">
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                </a>
+            </li>
+            <li class="icon-elem">
+                <a href="" class="icon">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+            </li>
+            <li class="icon-elem">
+                <a href="" class="icon">
+                    <ion-icon name="mail-outline"></ion-icon>
+                </a>
+            </li>
+        </ul>
+        <ul class="menu">
+            <li class="menu-elem"><a href="#" class="menu-icon">Inicio</a></li>
+            <li class="menu-elem"><a href="#" class="menu-icon">Ir</a></li>
+            <li class="menu-elem"><a href="#" class="menu-icon">Destinos</a></li>
+            <li class="menu-elem"><a href="#" class="menu-icon">Afíliate</a></li>
+            <li class="menu-elem"><a href="#" class="menu-icon">Nosotros</a></li>
+            <li class="menu-elem"><a href="#" class="menu-icon">Contacto</a></li>
+        </ul>
+        <p class="text">@2025 | Todos los derechos reservados</p>
+    </footer>
+    <!-- Scripts -->
+    <script src="js/scripts.js"></script>
+    <script src="js/destinos.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

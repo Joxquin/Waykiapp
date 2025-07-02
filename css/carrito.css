@@ -1,0 +1,294 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #F9FAFB;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  transition: 0.7s;
+  z-index: 10;
+  background-color: transparent;
+}
+
+header.abajo {
+  background-color: #ffffff;
+  height: 60px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.logo img {
+  max-height: 210px;
+  width: auto;
+  transition: 0.3s ease;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+nav ul li a:hover {
+  background-color: #c0d8f9;
+  color: #FFFFFF;
+}
+
+header.abajo ul li a {
+  color: #1F2937;
+}
+
+.zona1 {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/img1.jpg") no-repeat center center fixed;
+  background-size: cover;
+  background-position: center center;
+}
+
+
+.contenido {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #1F2937;
+  text-align: center;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 20px;
+}
+
+input, select, button {
+  padding: 10px;
+  margin: 5px;
+  font-size: 16px;
+}
+
+.tabla {
+  width: 80%;
+  margin: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.resumen {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.pagar {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.carnet {
+  background-color: #d4ff00;
+  padding: 10px 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.banner {
+  background-image: url('felicidades.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.banner h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.banner p {
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.footer {
+  background: #1F2937;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.icon-elem {
+  list-style: none;
+}
+
+.icon {
+  color: #F9FAFB;
+  font-size: 32px;
+  margin: 0 10px;
+  transition: 0.5s;
+}
+
+.icon:hover {
+  transform: translateY(-10px);
+  color: #10B981;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.menu-elem {
+  list-style: none;
+}
+
+.menu-icon {
+  color: #F9FAFB;
+  font-size: 16px;
+  text-decoration: none;
+  margin: 5px 10px;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.menu-icon:hover {
+  opacity: 1;
+  color: #10B981;
+}
+
+.text {
+  color: #F9FAFB;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background-color: #ffffff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+  }
+
+  header:hover nav ul {
+    display: flex;
+  }
+
+  nav ul li a {
+    color: #1F2937;
+    margin: 10px;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+
+  .icon {
+    font-size: 24px;
+  }
+
+  .menu-icon {
+    font-size: 14px;
+  }
+
+  .text {
+    font-size: 14px;
+  }
+}
+.banner-texto {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.cuadro-felicidades {
+background-color: #a3d8ff;
+
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cuadro-instruccion {
+  background-color: #ffffff;
+  padding: 15px;
+  border-left: 5px solid  #a3d8ff;
+  border-radius: 6px;
+  text-align: center;
+  color: #1F2937;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}

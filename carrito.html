@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Wayki Go - Recarga</title>
+    <link rel="stylesheet" href="css/carrito.css">
+</head>
+<body>
+  <!-- Header -->
+<header>
+  <a href="#" class="logo">
+    <img src="img/logoprincipal.png" alt="Wayki Logo" />
+  </a>
+  <nav>
+    <ul>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="miruta.html">Mi Ruta</a></li>
+        <li><a href="destinos.html">Destinos</a></li>
+        <li><a href="login.html">Afiliate</a></li>
+        <li><a href="sobre nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+  <!-- Sección principal -->
+  <section class="zona1"></section>
+
+<section class="contenido">
+  <div class="banner-texto">
+    <div class="cuadro-felicidades">
+      <h1>FELICIDADES! AHORA ERES NUEVO USUARIO DE WAYKI GO</h1>
+    </div>
+    <div class="cuadro-instruccion">
+      <h2>Para recargar llena el siguiente formulario</h2>
+    </div>
+  </div>
+</section>
+
+    <section class="formulario">
+        <label>SELECCIONA TU BUS:</label>
+        <select id="bus">
+            <option value="Cotum A" data-precio="1.5">Cotum A - S/. 1.50</option>
+            <option value="Cotum B" data-precio="1.5">Cotum B - S/. 1.50</option>
+            <option value="Los Canarios A" data-precio="2.00">Los Canarios A - S/. 2.00</option>
+            <option value="Los Canarios C" data-precio="2.00">Los Canarios B - S/. 2.00</option>
+        </select>
+
+        <label>N° DE VIAJES:</label>
+        <input type="number" id="viajes" min="1">
+
+        <button onclick="agregarAlCarrito()">AGREGAR</button>
+    </section>
+
+    <section class="tabla">
+        <table>
+            <thead>
+                <tr>
+                    <th>Línea de bus</th>
+                    <th>Precio x viaje</th>
+                    <th>N° de viajes</th>
+                    <th>Subtotal</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody id="carrito-body"></tbody>
+        </table>
+
+        <div class="resumen">
+            <p><strong>TOTAL SIN DESCUENTO:</strong> <span id="totalSinDesc">0</span> SOLES</p>
+            <p><strong>DESCUENTO APLICADO:</strong> <span id="descuento">0%</span></p>
+            <p><strong>TOTAL A PAGAR:</strong> <span id="totalPagar">0</span> SOLES</p>
+        </div>
+
+        <button class="pagar" onclick="pagar()">PAGAR</button>
+        <p class="exito" id="mensajeExito" style="display:none;">COMPRA EXITOSA, AHORA PUEDES VER TU SALDO ACTUALIZADO EN TU CARNET</p>
+        <button class="carnet">VER CARNET ACTUALIZADO</button>
+    </section>
+
+<footer class="footer">
+  <ul class="social-icon">
+    <li class="icon-elem">
+      <a href="" class="icon">
+        <ion-icon name="logo-youtube"></ion-icon>
+      </a>
+    </li>
+    <li class="icon-elem">
+      <a href="" class="icon">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </a>
+    </li>
+    <li class="icon-elem">
+      <a href="" class="icon">
+        <ion-icon name="logo-whatsapp"></ion-icon>
+      </a>
+    </li>
+    <li class="icon-elem">
+      <a href="" class="icon">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </a>
+    </li>
+    <li class="icon-elem">
+      <a href="" class="icon">
+        <ion-icon name="mail-outline"></ion-icon>
+      </a>
+    </li>
+  </ul>
+
+  <ul class="menu">
+    <li class="menu-elem"><a href="#" class="menu-icon">Inicio</a></li>
+    <li class="menu-elem"><a href="#" class="menu-icon">Mi ruta</a></li>
+    <li class="menu-elem"><a href="#" class="menu-icon">Destinos</a></li>
+    <li class="menu-elem"><a href="#" class="menu-icon">Afíliate</a></li>
+    <li class="menu-elem"><a href="#" class="menu-icon">Nosotros</a></li>
+    <li class="menu-elem"><a href="#" class="menu-icon">Contacto</a></li>
+  </ul>
+  <p class="text">@2025 | Todos los derechos reservados</p>
+</footer>
+
+
+<script src="js/carrito.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
