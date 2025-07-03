@@ -153,5 +153,12 @@ body {
 }
 
 @media (max-width: 500px) {
-  
+  .scroll-container {
+    margin-left: 20px;
+    margin-right: 40px;
+  }
+  #destino-search-container {
+    max-width: 85%;
+    margin-left: 20px;
+  }
 }
