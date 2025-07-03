@@ -1,7 +1,7 @@
 body {
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.01), rgba(0,0,0,0.5)),
-        url(../img/destinos/MdSBackground.png);
+        url(../img/destinos/MdSBackground.avif);
     position: relative;
 }
 
