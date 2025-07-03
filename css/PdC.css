@@ -15,9 +15,16 @@ gmp-map {
 }
 
 .carousel-container {
+  padding-top: 32px;
+  padding-bottom: 45px;
+  background: rgba(20, 20, 20, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
   position: relative;
   width: 60%;
-  margin: 0 auto 30px auto;
+  margin: 30px auto 30px auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,6 +88,17 @@ gmp-map {
     margin-bottom: 20px;
   }
   .carousel-container {
+    max-width: 90%;
     width: 100%;
+    padding-top: 2px;
+    padding-bottom: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .carousel-btn {
+    font-size: 1rem;
+    padding: 6px 14px 8px 12px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
