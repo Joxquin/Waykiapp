@@ -74,6 +74,7 @@ body {
 @media (max-width: 500px) {
     .title-main {
     font-size: 3rem;
+    margin-top: 150px;
     margin-left: 20px;
   }
     .subtitle-main {
